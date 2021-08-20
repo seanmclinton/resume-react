@@ -22,7 +22,7 @@ class App extends Component {
 
   getResumeData(){
     $.ajax({
-      url:'http://localhost:8000/resume/all',
+      url:'http://localhost:8000/resume/',
       dataType:'json',
       cache: false,
       success: function(data){
@@ -37,7 +37,7 @@ class App extends Component {
 
   getPersonalInfo(){
     $.ajax({
-      url:'http://localhost:8000/getMyInfo/',
+      url:'http://localhost:8000/contact/',
       dataType:'json',
       cache: false,
       success: function(data){

@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       foo: 'bar',
-      resumeData: {},
+      resumeData: [],
       personalInfo: {}
     };
 
@@ -26,7 +26,9 @@ class App extends Component {
       dataType:'json',
       cache: false,
       success: function(data){
-        this.setState({resumeData: data});
+        const resume_items = data.slice()
+        this.setState({
+          resumeData: resume_items});
       }.bind(this),
       error: function(xhr, status, err){
         console.log(err);
@@ -37,7 +39,7 @@ class App extends Component {
 
   getPersonalInfo(){
     $.ajax({
-      url:'http://localhost:8000/contact/',
+      url:'http://localhost:8000/contact_info/1/',
       dataType:'json',
       cache: false,
       success: function(data){
@@ -60,7 +62,7 @@ class App extends Component {
       <div className="App">
         <Header data={this.state.personalInfo}/>
         <About data={this.state.personalInfo}/>
-        <Resume data={this.state.resumeData.data}/>
+        <Resume data={this.state.resumeData}/>
         <SiteInfo />
         {/* <Contact data={this.state.resumeData.main}/> */}
         {/* <Footer data={this.state.resumeData.main}/> */}

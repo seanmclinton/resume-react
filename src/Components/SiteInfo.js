@@ -24,35 +24,8 @@ class SiteInfo extends Component {
             <div>
                 <h2>React</h2>
             </div>
-            <div>
-                <h2>Hosted on AWS</h2>
-            </div>
         </div>
-        <br />
-        <br />
-        <br />
     </div>
-
-
-
-      {/* <div className="row skill">
-
-         <div className="three columns header-col">
-            <h1><span>Skills</span></h1>
-         </div>
-
-         <div className="nine columns main-col">
-
-            <p>{skillmessage}
-            </p>
-
-				<div className="bars">
-				   <ul className="skills">
-					  {skills}
-					</ul>
-				</div>
-			</div>
-      </div> */}
    </section>
     );
   }

@@ -5,11 +5,7 @@ class Header extends Component {
 
     if(this.props.data){
        var first_name = this.props.data.first_name;
-    //   var occupation= this.props.data.occupation;
-    //   var description= this.props.data.description;
        var city= this.props.data.city;
-    //   var networks= this.props.data.social.map(function(network){
-    //   })
     }
 
     return (
@@ -25,7 +21,6 @@ class Header extends Component {
             <li><a className="smoothscroll" href="#about">About</a></li>
 	        <li><a className="smoothscroll" href="#resume">Resume</a></li>
             <li><a className="smoothscroll" href="#siteinfo">Site Info</a></li>
-            {/* <li><a className="smoothscroll" href="#contact">Contact</a></li> */}
          </ul>
 
       </nav>
@@ -35,9 +30,6 @@ class Header extends Component {
             <h1 className="responsive-headline">Hi, I'm {first_name}</h1>
             <h3>I'm a {city} based <span>Software Engineer</span></h3>
             <hr />
-            <ul className="social">
-               {/* {networks} */}
-            </ul>
          </div>
       </div>
 
